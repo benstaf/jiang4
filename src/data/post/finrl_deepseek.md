@@ -63,3 +63,8 @@ The FinRL-DeepSeek framework introduces two novel components:
 ## Why This Matters
 
 FinRL-DeepSeek demonstrates that LLMs can do more than sentiment analysis. For quant firms and investors, this approach offers a blueprint for building AI agents that are both data-savvy and risk-aware. As LLMs adoption grows, such hybrid RL-LLM approaches could transform how we navigate financial markets, with many variants remaining to be explored.
+
+---
+
+Initially posted on [Melwy](https://melwy.com/finrl_deepseek)
+

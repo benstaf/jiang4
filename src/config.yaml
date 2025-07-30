@@ -18,7 +18,7 @@ metadata:
   openGraph:
     site_name: Jiang Street 
     images:
-      - url: '~/assets/images/jiangstreet_image.jpg'
+      - url: 'https://jiangstreet.com/jiangstreet_image.jpg'
         width: 1200
         height: 628
     type: website

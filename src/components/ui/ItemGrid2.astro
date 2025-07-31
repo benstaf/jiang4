@@ -14,6 +14,11 @@ const {
   description: descriptionClass = '',
   icon: defaultIconClass = 'text-primary',
 } = classes;
+
+// Helper function to check if icon is a file path
+const isImagePath = (iconName: string) => {
+  return iconName && (iconName.startsWith('/') || iconName.startsWith('./') || iconName.includes('.png') || iconName.includes('.jpg') || iconName.includes('.svg'));
+};
 ---
 
 {
@@ -41,7 +46,17 @@ const {
           )}
         >
           {(icon || defaultIcon) && (
-            <Icon name={icon || defaultIcon} class={twMerge('mb-2 w-10 h-10', defaultIconClass, itemClasses?.icon)} />
+            <div class={twMerge('mb-2 w-10 h-10', defaultIconClass, itemClasses?.icon)}>
+              {isImagePath(icon || defaultIcon) ? (
+                <img 
+                  src={icon || defaultIcon} 
+                  alt={title || 'Icon'} 
+                  class="w-full h-full object-contain"
+                />
+              ) : (
+                <Icon name={icon || defaultIcon} class="w-full h-full" />
+              )}
+            </div>
           )}
           <div class={twMerge('text-xl font-bold', titleClass, itemClasses?.title)}>{title}</div>
           {description && (
